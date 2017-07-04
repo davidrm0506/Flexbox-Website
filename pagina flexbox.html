@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Página con Flexbox</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+<body>
+    
+    <style>
+        
+        * {
+            margin:0;
+            padding:0;
+        }
+        
+        body {
+            background:#e6e6e6;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        .contenedor {
+            width:90%;
+            max-width:1000px;
+            margin:20px auto;
+        }
+        
+        h1 {
+            color:#fff;
+        }
+        
+        header {
+            background:#234170;
+            overflow:hidden;
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:space-between;
+            padding:10px;
+            align-items:baseline;
+        }
+        
+        header nav {
+            background:#ff8349;
+        }
+        
+        header nav ul {
+            list-style:none;
+        }
+        
+        header nav ul li {
+            float:left;
+        }
+        
+        header nav ul li a {
+            padding:10px 20px;
+            display:block;
+            color:#fff;
+            text-decoration:none;
+            -webkit-transition: all .3s ease;
+            -moz-transition: all .3s ease;
+            -ms-transition: all .3s ease;
+            -o-transition: all .3s ease;
+            transition: all .3s ease;
+        }
+        
+        header nav ul li a:hover {
+            background:#fff;
+            color:#ff8349;
+        }
+        
+        .articles {
+            width:68.5%;
+            float:left;
+            margin-right:1.5%;
+        }
+        
+        .articles article {
+            background:#fff;
+            padding:20px;
+            margin-bottom:20px;
+        }
+        
+        aside {
+            width:30%;
+            float:left;
+            padding:20px;
+            background:#ff8349;
+            box-sizing:border-box;
+        }
+        
+        footer {
+            width:100%;
+            background:#000;
+            color:#fff;
+            clear:both;
+            padding:10px 0px;
+            text-align:center;
+        }
+        
+        .cajas {
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+            width:800px;
+            height:500px;
+            border:1px solid #000;
+            padding:10px;
+        }
+        
+        .caja {
+            width:200px;
+            height:200px;
+            padding:10px;
+            background:red;
+            color:#fff;
+            margin:10px;
+        }
+        
+        @media screen and (max-width:800px) {
+            .cajas {
+                width:500px;
+            }
+        }
+        
+        @media screen and (max-width:500px) {
+            .cajas {
+                width:250px;
+                height:800px;
+            }
+        }
+        
+    </style>
+    
+    <header class="contenedor">
+        <h1>WebSite</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Proyectos</a></li>
+                <li><a href="#">Servcios</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="contenedor">
+        <div class="articles">
+            <article>
+                <h2>About</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </article>
+            <article>
+                <h2>About</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </article>
+        </div>
+        <aside>
+            <h2>About</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </aside>
+    </div>
+    
+    <footer>
+        <p>Official WebSite Flexbox - 2017</p>
+    </footer>
+    
+    <div class="contenedor cajas">
+        <div class="caja">1</div>
+        <div class="caja">2</div>
+        <div class="caja">3</div>
+    </div>
+    
+</body>
+</html>
